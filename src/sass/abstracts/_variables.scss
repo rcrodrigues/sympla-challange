@@ -1,0 +1,31 @@
+// Theme Colors
+// $colors: (
+// 	'primary':		#0097ff,
+// 	'secondary':	#50525f,
+// 	'warning':		#ff9023,
+// 	'error':		#ff4f4f
+// 	);
+
+
+$primary: #0097ff;
+$secondary:	#50525f;
+$warning:#ff9023;
+$error:	#ff4f4f;
+
+// extra colors
+$white: #ffffff;
+$background-color: #fbfbfb;
+
+// screen sizes
+$breakpoints: (
+	'medium':	(min-width: 800px),
+	'large':	(min-width: 1000px),
+	'huge':		(min-width: 1200px)
+	);
+
+// sizes
+$default-padding: 20px;
+$header-height: 64px;
+$avatar-size: 44px;
+$card-padding: 30px;
+$page-container-side-padding: 8vw;

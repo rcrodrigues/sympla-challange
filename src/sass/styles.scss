@@ -1,6 +1,23 @@
-@import './variables';
-@import './mixins';
+@import './base/typography';
+@import './abstracts/variables';
+@import './abstracts/mixins';
+@import './components/avatar';
+@import './components/card';
+@import './layout/header';
 
-h1 {
-    color: pink;
+body {
+
+    background-color: $background-color;
+    margin: 0px;
+    height: 100vh;
+
+    .afix {
+        position: relative;
+        margin-top: $header-height;
+    }
+
+    .page-container {
+        padding: 21px $page-container-side-padding;
+    }
+
 }

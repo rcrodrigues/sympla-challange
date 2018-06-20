@@ -1,0 +1,31 @@
+@import './abstracts/variables';
+
+.header-container {
+    left: 0;
+    top: 0;
+    position: fixed;
+    z-index: 10;
+    display: block;
+    width: 100%;
+
+    header {
+
+        padding: 0px $default-padding;
+        display: flex;
+        flex-wrap: wrap-reverse;
+        justify-content: space-between;
+        align-items: center;
+        min-height: $header-height;
+        max-height: auto;
+        min-width: 0;
+        max-width: 100%;
+        background-color: $white;
+        box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.2);
+
+        img.logo {
+            height: 50px;
+            width: 50px;
+        }
+
+    }
+}

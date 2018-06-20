@@ -1,0 +1,8 @@
+@import './src/sass/abstracts/_variables';
+
+.page-header {
+    display: flex;
+    height: 112px;
+    background: $white;
+    border-bottom: 0.5px solid #ebebeb;
+}
