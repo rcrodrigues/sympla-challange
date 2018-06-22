@@ -1,17 +1,16 @@
 import { Component, OnInit, Input } from '@angular/core';
 
 @Component({
-  selector: 'app-avatar',
-  templateUrl: './avatar.component.pug',
-  styleUrls: ['./avatar.component.scss']
+	selector: 'app-avatar',
+	templateUrl: './avatar.component.pug'
 })
 export class AvatarComponent implements OnInit {
 
-  @Input('imgSrc') imgSrc: string = '';
+	@Input('imgSrc') imgSrc = '';
 
-  constructor() { }
+	constructor() { }
 
-  ngOnInit() {
-  }
+	ngOnInit() {
+	}
 
 }

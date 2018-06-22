@@ -1,0 +1,12 @@
+@import './abstracts/mixins';
+@import './abstracts/variables';
+
+button {
+
+	@include btn-theme($primary);
+
+	&.warning {
+		@include btn-theme($warning);
+	}
+
+}

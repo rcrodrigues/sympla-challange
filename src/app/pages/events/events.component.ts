@@ -1,15 +1,24 @@
+import { EventMeeting } from './../../interfaces/event';
+import { EventService } from './../../services/event/event.service';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'app-events',
-  templateUrl: './events.component.pug',
-  styleUrls: ['./events.component.scss']
+	selector: 'app-events',
+	templateUrl: './events.component.pug',
+	styleUrls: ['./events.component.scss']
 })
 export class EventsComponent implements OnInit {
 
-  constructor() { }
+	events: EventMeeting[] = [];
 
-  ngOnInit() {
-  }
+	constructor(
+		private eventService: EventService
+	) {
+		this.events = this.eventService.getAllEvents();
+	}
+
+	ngOnInit() {
+		this.events = this.eventService.getAllEvents();
+	}
 
 }

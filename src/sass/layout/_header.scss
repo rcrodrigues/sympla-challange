@@ -9,12 +9,9 @@
     width: 100%;
 
     header {
-
+        @extend .display-flex-center;
         padding: 0px $default-padding;
-        display: flex;
         flex-wrap: wrap-reverse;
-        justify-content: space-between;
-        align-items: center;
         min-height: $header-height;
         max-height: auto;
         min-width: 0;

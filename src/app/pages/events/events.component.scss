@@ -1,0 +1,13 @@
+@import './src/sass/layout/grid';
+
+.no-events {
+	@extend .col;
+	@extend .align-center;
+	margin-top: 80px;
+	p {
+		color: #85868f;
+		font-size: 14px;
+		line-height: 1.29;
+	}
+}
+

@@ -1,18 +1,17 @@
 import { Component, OnInit, Input } from '@angular/core';
 
 @Component({
-  selector: 'app-page-header',
-  templateUrl: './page-header.component.pug',
-  styleUrls: ['./page-header.component.scss']
+	selector: 'app-page-header',
+	templateUrl: './page-header.component.pug'
 })
 export class PageHeaderComponent implements OnInit {
 
-  @Input('pageName') pageName : string = "";
-  @Input('showCreateEventBtn') showCreateEventBtn : boolean = false;
+	@Input('pageName') pageName = '';
+	@Input('showCreateEventBtn') showCreateEventBtn = false;
 
-  constructor() { }
+	constructor() { }
 
-  ngOnInit() {
-  }
+	ngOnInit() {
+	}
 
 }

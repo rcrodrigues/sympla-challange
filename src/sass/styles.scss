@@ -2,14 +2,19 @@
 @import './abstracts/variables';
 @import './abstracts/mixins';
 @import './components/avatar';
+@import './components/button';
 @import './components/card';
+@import './components/input';
+@import './components/table';
+@import './components/page_header';
 @import './layout/header';
+@import './layout/grid';
 
 body {
 
     background-color: $background-color;
     margin: 0px;
-    height: 100vh;
+    height: calc(100vh - #{$header-height});
 
     .afix {
         position: relative;

@@ -1,0 +1,14 @@
+@import './src/sass/abstracts/_variables';
+
+.page-header {
+    @extend .display-flex-center;
+    height: 112px;
+    background: $white;
+    border-bottom: 0.5px solid #ebebeb;
+    padding: 0px $page-container-side-padding;
+
+    h1.page-name {
+        padding: 0px $card-padding;
+    }
+
+}

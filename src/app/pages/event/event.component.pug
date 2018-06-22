@@ -1,11 +1,75 @@
 app-page-header(pageName="Criar Eventos")
 .page-container
-    .card
-        .title 1. Nome do Evento
-        //- input()
+	form('(ngSubmit)'="onSubmit()", #symplaEvent="ngForm")
+		.card
+			.title 1. Nome do Evento
+			.content
+				.col
+					.input-container
+						label(for="name") Nome do evento *
+						.input-group
+							.input-group-content
+								input#name(name="name", type="text",'[(ngModel)]'="event.name", required)
 
-        .title 2. Quando?
-        //- input()
+			.title 2. Quando?
+			.content
+				.row.wrap
+					.row.wrap
+						.input-container
+							label(for="startDate") Data de Início *
+							.input-group
+								.input-group-icon
+									img(src="../assets/calendar.png")
+								.input-group-content
+									input#startDate(name="startDate", type="date",'[(ngModel)]'="event.startDate",  required)
+						.input-container
+							label(for="startTime") Hora de Início *
+							.input-group
+								.input-group-icon
+									img(src="../assets/time.png")
+								.input-group-content
+									input#startTime(name="startTime", type="time",'[(ngModel)]'="event.startTime",  required)
+					.row.wrap
+						.input-container
+							label(for="endDate") Data de término *
+							.input-group
+								.input-group-icon
+									img(src="../assets/calendar.png")
+								.input-group-content
+									input#endDate(name="endDate", type="date",'[(ngModel)]'="event.endDate",  required)
 
-        .title 3. Ingresso
-        //- input()
+						.input-container
+							label(for="endTime") Hora de término *
+							.input-group
+								.input-group-icon
+									img(src="../assets/time.png")
+								.input-group-content
+									input#endTime(name="endTime", type="time",'[(ngModel)]'="event.endTime",  required)
+
+			.title 3. Ingresso
+			.content
+				.row.wrap
+					.col.grow
+						.input-container
+							label(for="ticketName") Nome do Ingresso *
+							.input-group
+								.input-group-content
+									input#ticketName(name="ticketName", type="text",'[(ngModel)]'="event.ticket.name",  required)
+					.col.grow
+						.input-container
+							label(for="ticketQuantity") Quantidade de Ingressos *
+							.input-group
+								.input-group-content
+									input#ticketQuantity(name="ticketQuantity", type="number",'[(ngModel)]'="event.ticket.quantity",  required)
+					.col.grow
+						.input-container
+							label(for="ticketPrice") Preço do Ingresso *
+							.input-group
+								.input-group-content
+									input#ticketPrice(name="ticketPrice", type="number",'[(ngModel)]'="event.ticket.price",  required)
+					.col.grow
+						.row
+							input#free(name="free", type="checkbox",'[(ngModel)]'="event.ticket.free")
+							label(for="free") Grátis
+
+		button(type="submit", [disabled]="!symplaEvent.form.valid", style="float:right") publicar evento

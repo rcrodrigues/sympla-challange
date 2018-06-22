@@ -1,0 +1,5 @@
+@import './src/sass/abstracts/variables';
+
+button[type=submit] {
+	margin: 30px $card-padding;
+}
