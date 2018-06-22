@@ -12,17 +12,22 @@
 
 body {
 
-    background-color: $background-color;
-    margin: 0px;
-    height: calc(100vh - #{$header-height});
+	background-color: $background-color;
+	margin: 0px;
+	height: calc(100vh - #{$header-height});
 
-    .afix {
-        position: relative;
-        margin-top: $header-height;
-    }
+	.afix {
+		position: relative;
+		margin-top: $header-height;
+	}
 
-    .page-container {
-        padding: 21px $page-container-side-padding;
-    }
+	.scroll-container {
+		overflow-y: scroll;
+		height: calc(100vh - #{$header-height});
+		.page-container {
+			padding: 21px $page-container-side-padding;
+		}
+	}
+
 
 }

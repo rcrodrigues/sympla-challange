@@ -1,6 +1,7 @@
+import { EventMeeting } from './../../interfaces/event';
 import { EventService } from './../../services/event/event.service';
 import { Component, OnInit } from '@angular/core';
-import { EventMeeting } from '../../interfaces/event';
+import { ActivatedRoute } from '@angular/router';
 
 @Component({
 	selector: 'app-event',
@@ -12,18 +13,25 @@ export class EventComponent implements OnInit {
 	private event: EventMeeting;
 
 	constructor(
-		private eventService: EventService
+		private eventService: EventService,
+		private route: ActivatedRoute
 	) {
 		this.setNewEmptyEvent();
 	}
 
 	ngOnInit() {
+		const eventId = this.route.snapshot.paramMap.get('id');
+		if (eventId) {
+			this.eventService.getEvent(eventId).valueChanges()
+			.subscribe( (event: EventMeeting) => this.event = event);
+		}
 	}
 
 	setNewEmptyEvent() {
 		this.event = {
 			id: null,
 			name: null,
+			city: null,
 			startDate: null,
 			startTime: null,
 			endDate: null,
@@ -40,6 +48,7 @@ export class EventComponent implements OnInit {
 	}
 
 	onSubmit() {
+
 		if (this.event.id) {
 			this.eventService.updateEvent(this.event);
 		} else {

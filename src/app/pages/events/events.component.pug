@@ -14,3 +14,15 @@ app-page-header(pageName="Meus Eventos",[showCreateEventBtn]='events.length == 0
 	ng-template(#showEvents)
 		.card
 			h3 MINHA LISTA DE EVENTOS
+			.content
+				table
+					tr
+						th Evento
+						th Data
+						th Cidade
+						th Ingressos
+					tr(*ngFor="let event of events", (click)="edit(event)" )
+						td {{event.name}}
+						td {{event.startDate | date: 'dd/MM/yyyy'}}
+						td {{event.city}}
+						td {{event.ticket.remaining +" / "+event.ticket.quantity}}

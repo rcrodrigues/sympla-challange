@@ -6,12 +6,11 @@
 	flex-wrap: wrap;
 }
 
-
 .row {
+
 	display: flex;
 	align-items: flex-start;
 	flex-grow: 1;
-
 
 	.col {
 		margin-left: 20px;
@@ -19,6 +18,11 @@
 			margin-left: 0px;
 		}
 	}
+}
+
+.col {
+	display: flex;
+	flex-flow: column;
 }
 
 .row, .col{
@@ -42,11 +46,3 @@
 
 }
 
-.col {
-	display: flex;
-	flex-flow: column;
-}
-
-.col-6 {
-	@extend .col;
-}
