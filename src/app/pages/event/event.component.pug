@@ -75,7 +75,7 @@ app-page-header(pageName="Criar Eventos")
 							label.required(for="ticketPrice") Preço do Ingresso
 							.input-group
 								.input-group-content
-									input#ticketPrice(name="ticketPrice",  #ticketPrice="ngModel", type="number",'[(ngModel)]'="event.ticket.price",  required)
+									input#ticketPrice(name="ticketPrice",  #ticketPrice="ngModel", type="number",'[(ngModel)]'="event.ticket.value",  required)
 							.error(*ngIf="ticketPrice.invalid && (ticketPrice.dirty || ticketPrice.touched)") Campo obrigatório
 					.col.grow
 						.row
