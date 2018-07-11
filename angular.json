@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "sympla-challange": {
+    "wevent": {
       "root": "",
       "sourceRoot": "src",
       "projectType": "application",
@@ -17,7 +17,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/sympla-challange",
+            "outputPath": "dist/wevent",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -54,18 +54,18 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "sympla-challange:build"
+            "browserTarget": "wevent:build"
           },
           "configurations": {
             "production": {
-              "browserTarget": "sympla-challange:build:production"
+              "browserTarget": "wevent:build:production"
             }
           }
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "sympla-challange:build"
+            "browserTarget": "wevent:build"
           }
         },
         "test": {
@@ -99,7 +99,7 @@
         }
       }
     },
-    "sympla-challange-e2e": {
+    "wevent-e2e": {
       "root": "e2e/",
       "projectType": "application",
       "architect": {
@@ -107,11 +107,11 @@
           "builder": "@angular-devkit/build-angular:protractor",
           "options": {
             "protractorConfig": "e2e/protractor.conf.js",
-            "devServerTarget": "sympla-challange:serve"
+            "devServerTarget": "wevent:serve"
           },
           "configurations": {
             "production": {
-              "devServerTarget": "sympla-challange:serve:production"
+              "devServerTarget": "wevent:serve:production"
             }
           }
         },
@@ -127,5 +127,5 @@
       }
     }
   },
-  "defaultProject": "sympla-challange"
+  "defaultProject": "wevent"
 }

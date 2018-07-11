@@ -1,6 +1,6 @@
 app-page-header(pageName="Criar Eventos")
 .page-container
-	form('(ngSubmit)'="onSubmit()", #symplaEvent="ngForm")
+	form('(ngSubmit)'="onSubmit()", #Wevent="ngForm")
 		.card
 
 			.title 1. Nome do Evento
@@ -82,4 +82,4 @@ app-page-header(pageName="Criar Eventos")
 							input#free(name="free", type="checkbox",'[(ngModel)]'="event.ticket.free")
 							label(for="free") Grátis
 
-		button.warning(type="submit",[disabled]="!symplaEvent.form.valid", style="float:right") publicar evento
+		button.warning(type="submit",[disabled]="!Wevent.form.valid", style="float:right") publicar evento
